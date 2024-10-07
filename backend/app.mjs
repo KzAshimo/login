@@ -1,8 +1,11 @@
-import express, { json } from 'express';
+import express from 'express';
+const {json} = express;
 import mysql from 'mysql2';
+import cors from 'cors';
 
 const app = express();
 const port = 3000;
+app.use(cors())
 
 const connection = mysql.createConnection({
     host:'127.0.0.1',
